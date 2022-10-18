@@ -1,4 +1,4 @@
-# README.md
+# JWTLogin README.md
 [[Fleeting Notes MOC]]
 
 # Login Page With JSON Web Token
@@ -60,9 +60,9 @@ DB_PASSWORD= //put your DB password
 - You can login with username of email of the registered user in the data of mysql
 - All passwords of the user is 123456
 ### EndPoint
-- going to `/` will make the tokens disappear (similar to logout)
+- going to `/` will make the tokens in cookie disappear (similar to logout)
 - login will bring you to `/admin` or `/user` depending on the role the user has and it will bring you to `/admin?check=....` or `/user?check=....`
-- Go to `/admin` or `/check` to trigger the accessToken refresh
+- Go to `/admin` or `/check` (without query parameter) to trigger the accessToken refresh
 
 ### REFERENCE
 - M Fikri youtube: 
