@@ -21,7 +21,7 @@ export async function routing(req,res){
 
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET,async(err, user) => 
         {
-            if(err) return res.redirect('/notfound')
+            if(err) return res.json({message:"routing passing accessToken"})
             if(user && user.role === "admin") {
                 res.redirect(`/admin?check=${passingToken}`)
         }
@@ -53,7 +53,7 @@ export async function login(req,res){
         }
 
         if(user === "user not found"){
-            return res.redirect('/notfound')
+            return res.json({message:"user not found"})
         }
 
         bcrypt.compare(password, user.password,

@@ -62,6 +62,7 @@ DB_PASSWORD= //put your DB password
 ### EndPoint
 - going to `/` will make the tokens in cookie disappear (similar to logout)
 - login will bring you to `/admin` or `/user` depending on the role the user has and it will bring you to `/admin?check=....` or `/user?check=....`
+- new update: refreshing page means you are refreshing accessToken with the new triggerRefresh function
 - Go to `/admin` or `/check` (without query parameter) to trigger the accessToken refresh
 
 ### REFERENCE
